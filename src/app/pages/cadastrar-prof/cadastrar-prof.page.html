@@ -1,0 +1,48 @@
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input type="E-mail" [(ngModel)]="user.email" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="user.senha" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating" >Nome</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Endereço</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">CPF/CNPJ</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nome da Empresa</ion-label>
+    <ion-input type="text" required></ion-input>
+  </ion-item>
+
+
+
+
+</ion-content>
+
+<!-- Botão do Profissional -->
+<ion-row>
+
+
+<ion-col id="botaoprof" size="6">
+  <ion-button class="ion-text-center" expand="block" (click)="register()" color="success"  >Cadastrar</ion-button>
+</ion-col>
+
+<ion-col size="6">
+  <ion-button class="ion-text-center" (click)="voltar()" expand="block">Voltar</ion-button>
+</ion-col>
+</ion-row>
