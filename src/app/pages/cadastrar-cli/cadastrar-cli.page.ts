@@ -33,7 +33,7 @@ export class CadastrarCliPage implements OnInit {
     aguarde.present();
     try {
       await this.autheService.register(this.user);
-      this.navCtrl.navigateRoot('home-prof');
+      this.navCtrl.navigateRoot('home-cli');
     } catch (error) {
       let massage: string;
       switch (error.code) {
