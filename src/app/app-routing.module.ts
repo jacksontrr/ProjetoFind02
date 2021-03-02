@@ -41,6 +41,22 @@ const routes: Routes = [
     path: 'login-cli',
     loadChildren: () => import('./pages/login-cli/login-cli.module').then( m => m.LoginCliPageModule),/*canActivate: [LoginCliGuard]*/
   },
+  {
+    path: 'detalis-prof',
+    loadChildren: () => import('./pages/detalis-prof/detalis-prof.module').then( m => m.DetalisProfPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'detalis-prof/:id',
+    loadChildren: () => import('./pages/detalis-prof/detalis-prof.module').then( m => m.DetalisProfPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'detalis-cli',
+    loadChildren: () => import('./pages/detalis-cli/detalis-cli.module').then( m => m.DetalisCliPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'detalis-cli/:id',
+    loadChildren: () => import('./pages/detalis-cli/detalis-cli.module').then( m => m.DetalisCliPageModule), canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

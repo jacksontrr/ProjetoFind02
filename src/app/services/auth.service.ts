@@ -19,8 +19,8 @@ register(user: User){
   return this.afa.createUserWithEmailAndPassword(user.email, user.senha)
 }
 
-logout(user: User){
-
+logout(){
+  return this.afa.signOut();
 }
 
 getaAuth(){
