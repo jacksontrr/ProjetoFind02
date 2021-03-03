@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { formularioprof } from "../../interfaces/formularioprof";
 
 @Component({
   selector: 'app-detalis-prof',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalisProfPage implements OnInit {
 
+private detalhe: formularioprof = {};
   constructor() { }
 
   ngOnInit() {

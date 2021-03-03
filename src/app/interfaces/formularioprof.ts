@@ -1,5 +1,10 @@
 export interface formularioprof {
-  titulo?: string,
-  detalhe?: string,
-  valor?: number
+  id: string;
+  titulo?: string;
+  detalhe?: string;
+  valor?: number;
+  imagem?: string;
+  datacriacao?: number;
+
+
 }

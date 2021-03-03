@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthcService } from 'src/app/services/authc.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Platform, NavController, LoadingController, ToastController } from '@ionic/angular';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { DetalisProfService } from "../../services/detalis-prof.service";
+import { Subscription } from 'rxjs';
+import { formularioprof } from "../../interfaces/formularioprof";
 
 
 @Component({
@@ -12,16 +15,32 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class HomeProfPage implements OnInit {
 
+  private detalhes = new Array();
+
+  private detalhesSubscription: Subscription;
+
+
   constructor(private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private afAuth: AngularFireAuth,
     private navCtrl: NavController,
     private firestore: AngularFirestore,
     private platform: Platform,
-    private autheService: AuthcService) { }
+    private autheService: AuthService,
+    private detalisService: DetalisProfService) {
+      this.detalhesSubscription = this.detalisService.getdetalhes().subscribe(data => {
+        this.detalhes = data;
+      })
+     }
 
   ngOnInit() {
   }
+
+  ngOnDetroy(){
+    this.detalhesSubscription.unsubscribe();
+  }
+
+
 
   async logout() {
     let aguarde = await this.loadingCtrl.create({
