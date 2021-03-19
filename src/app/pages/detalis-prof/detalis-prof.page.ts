@@ -8,7 +8,6 @@ import { formularioprof } from "../../interfaces/formularioprof";
 })
 export class DetalisProfPage implements OnInit {
 
-private detalhe: formularioprof = {};
   constructor() { }
 
   ngOnInit() {

@@ -1,9 +1,21 @@
 .fundo{
-  background-color: #00CC6D;
+  background-image: url('../../img/tela-lupa-app.png');
+  background-size:contain;
+  background-repeat: repeat;
   height: 100%;
 }
 .botao{
 position: absolute;
 bottom:0;
 width: 100%;
+}
+.botaoc{
+  background-color: #0A0B0A;
+  border-radius: 5px 5px;
+}
+
+.botaov{
+  background-color: #eaf4ef;
+  color:#0b0b0b;
+  border-radius: 5px 5px;
 }
